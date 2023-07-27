@@ -1,5 +1,20 @@
 textarea{
     height: 10vh;
-    width: 40%;
+    width: 80%;
+    display: block;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#btn-test{
+    margin: 1rem;
+}
+
+#output{
     border: 1px solid black;
+    height: 10vh;
+    width: 80%;
+    display: block;
+    margin: 1rem;
+    padding: 1rem;
 }
