@@ -5,15 +5,10 @@ var outputBox = document.querySelector("#output");
 
 
 
-function clickEvent(){
+function clickEvent() {
     var outputText = inputBox.value;
     outputBox.innerText = "You typed: " + outputText;
 
-    // console.log("Button has been clicked");
-    // console.log("input is", inputBox.value); // showing input of textarea in console
 }
 
 var btnOutput = btnTest.addEventListener("click", clickEvent);
-
-// outputBox.innerText = "So many things to learn";
-
