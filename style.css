@@ -1,20 +1,104 @@
-textarea{
-    height: 10vh;
-    width: 80%;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Raleway&display=swap');
+:root {
+    --primary-color: #9333ea;
+    --width-break: 600px;
+}
+
+body {
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
     display: block;
+    justify-content: center;
+}
+
+main {
+    margin: auto;
     padding: 1rem;
-    margin: 1rem;
+    max-width: var(--width-break);
 }
 
-#btn-test{
-    margin: 1rem;
+h5 {
+    color: grey;
+    font-style: italic;
+    margin: 1vh;
 }
 
-#output{
+p {
+    font-weight: inherit;
+    font-style: italic;
+    width: 60%;
+    max-width: 100%;
+    margin: auto;
+    padding: 1rem;
+}
+
+textarea {
+    box-sizing: border-box;
+    height: 15vh;
+    width: 100%;
+    padding: 0.5rem;
+    margin: 5vh 1vh 1vh 1vh;
+    font-family: 'Inter', sans-serif;
+    font-size: medium;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.header {
+    background: var(--primary-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer {
+    background: var(--primary-color);
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.header-txt {
+    font-weight: bold;
+    color: white;
+    padding: 1rem;
+    font-size: larger;
+}
+
+.footer-txt {
+    font-weight: bold;
+    color: white;
+    padding: 0.2rem;
+    font-size: large;
+    padding-top: 10px;
+}
+
+#btn-test {
+    background-color: var(--primary-color);
+    margin: 2vh 1vh;
+    color: white;
+    font-weight: 700;
+    padding: 0.9rem;
+    border: none;
+}
+
+#output {
     border: 1px solid black;
-    height: 10vh;
-    width: 80%;
-    display: block;
-    margin: 1rem;
+    height: 5vh;
+    width: 95%;
+    margin: 1vh;
     padding: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        margin: 0 auto 1vh auto;
+        max-width: 275px;
+        width: 100%;
+    }
+    .footer {
+        position: relative;
+    }
 }

@@ -11,18 +11,32 @@
 
 <body>
 
-    <h1>Check console</h1>
+    <nav class="header">
 
-    <textarea id="input-box" placeholder="Enter text to translate into morse code"></textarea><br>
+        <div class="header-txt">Morse talk</div>
+
+    </nav>
+
+    <main>
+
+        <textarea id="input-box" placeholder="Enter text to translate into morse code"></textarea><br>
+        <button id="btn-test">Translate to morse</button>
+        <h5>Translated text will be shown below 👇</h5>
+        <div id="output"></div>
+
+    </main>
 
 
-    <button id="btn-test">Translate</button>
 
-    <h1>Translated text will be shown below 👇</h1>
+    <footer class="footer">
 
-    <div id="output"></div>
+        <div class="footer-txt">About</div>
+        <p>
+            Convert from English to Morse Code. Morse code is a method of transmitting text information as a series of on-off tones, lights, or clicks that can be directly understood by a skilled listener or observer without special equipment. The International Morse
+            Code encodes the ISO basic Latin alphabet, some extra Latin letters, the Arabic numerals and a small set of punctuation and procedural signals as standardized sequences of short and long signals called "dots" and "dashes", or "dits" and "dahs".
+        </p>
 
-
+    </footer>
 
     <script type="text/javascript" src="app.js"></script>
 </body>
