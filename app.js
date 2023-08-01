@@ -1,14 +1,36 @@
-var inputBox = document.querySelector("#input-box");
+var inputTxt = document.querySelector("#input-box");
 var btnTest = document.querySelector("#btn-test");
-var outputBox = document.querySelector("#output");
+var outputTxt = document.querySelector("#output");
+
+var url = "https://api.funtranslations.com/translate/morse.json";
 
 
+function constructURL(text) {
 
-
-function clickEvent() {
-    var outputText = inputBox.value;
-    outputBox.innerText = "You typed: " + outputText;
+    return url + "?" + "text=" + text;
 
 }
 
-var btnOutput = btnTest.addEventListener("click", clickEvent);
+function errorHandler(error) {
+
+    console.log("server error", error);
+    alert("Something wrong with server, try again later!")
+
+}
+
+function clickEvent() {
+    var txtInput = inputTxt.value; // storing input text
+
+
+    // calling server processing
+    fetch(constructURL(txtInput))
+        .then(response => response.json())
+        .then(json => {
+            var translatedTxt = json.contents.translated;
+            outputTxt.innerText = translatedTxt;
+        })
+        .catch(errorHandler);
+
+}
+
+btnTest.addEventListener("click", clickEvent);
